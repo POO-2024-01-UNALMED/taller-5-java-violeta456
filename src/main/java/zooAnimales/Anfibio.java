@@ -1,4 +1,3 @@
-
 package zooAnimales;
 import java.util.ArrayList;
 
@@ -60,5 +59,3 @@ public class Anfibio extends Animal{
 	}
 
 }
-
-
