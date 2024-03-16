@@ -37,6 +37,19 @@ public class Anfibio extends Animal{
 		return  new Anfibio(nombre,edad,"selva",genero,"negro y amarillo",false);
 		
 	}
+	
+	public String getColorPiel() {
+		return colorPiel;
+	}
+	public void setColorPiel(String colorPiel) {
+		this.colorPiel=colorPiel;
+	}
+	public boolean isVenenoso() {
+		return venenoso;
+	}
+	public void setVenenoso(boolean venenoso) {
+		this.venenoso= venenoso;
+	}
 
 }
 
