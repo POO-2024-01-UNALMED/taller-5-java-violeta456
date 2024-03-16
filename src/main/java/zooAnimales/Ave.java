@@ -6,12 +6,12 @@ import gestion.Zona;
 
 public class Ave extends Animal {
 	private static ArrayList<Ave>listado=new ArrayList<>();
-	public int halcones;
-	public int aguilas;
+	public static int halcones;
+	public static int aguilas;
 	private String colorPlumas;
 	
-	public Ave(String nombre,int edad,String habitat,String genero,Zona zona, String colorPlumas) {
-		super(nombre,edad,habitat,genero,zona);
+	public Ave(String nombre,int edad,String habitat,String genero,String colorPlumas) {
+		super(nombre,edad,habitat,genero);
 		this.colorPlumas=colorPlumas;
 		listado.add(this);
 	}
@@ -24,13 +24,22 @@ public class Ave extends Animal {
 	public static int cantidadAves() {
 		return listado.size();
 	}
-	public int crearHalcon(String nombre,int edad,String genero, Zona zona) {
-		new Ave(nombre,edad,"montanas",genero,zona,"cafe glorioso");
-		return halcones++;
+	public static Ave crearHalcon(String nombre,int edad,String genero) {
+		halcones++;
+		return new Ave(nombre,edad,"montanas",genero,"cafe glorioso");
+		 
 	}
-	public int crearAguila(String nombre,int edad,String genero, Zona zona) {
-		new Ave(nombre,edad,"montanas",genero,zona,"blanco y amarillo");
-		return aguilas++;
+	public static Ave crearAguila(String nombre,int edad,String genero) {
+		aguilas++;
+		return new Ave(nombre,edad,"montanas",genero,"blanco y amarillo");
+		
+	}
+	
+	public String getColorPlumas() {
+		return colorPlumas;
+	}
+	public void setColorPlumas(String colorPlumas) {
+		this.colorPlumas=colorPlumas;
 	}
 	
 	

@@ -5,13 +5,13 @@ import gestion.Zona;
 
 public class Pez extends Animal {
 	private static ArrayList<Pez>listado=new ArrayList<>();
-	public int salmones;
-	public int bacalaos;
+	public static int salmones;
+	public static int bacalaos;
 	private String colorEscamas;
 	private int cantidadAletas;
 	
-	public Pez(String nombre,int edad,String habitat,String genero,Zona zona,String colorEscamas, int cantidadAletas) {
-		super(nombre,edad,habitat,genero,zona);
+	public Pez(String nombre,int edad,String habitat,String genero, String colorEscamas, int cantidadAletas) {
+		super(nombre,edad,habitat,genero);
 		this.colorEscamas=colorEscamas;
 		this.cantidadAletas=cantidadAletas;
 		listado.add(this);
@@ -24,13 +24,27 @@ public class Pez extends Animal {
 	public static int cantidadPeces() {
 		return listado.size();
 	}
-	public int crearSalmon(String nombre,int edad,String genero, Zona zona) {
-		new Pez(nombre,edad,"oceano",genero,zona,"rojo",6);
-		return salmones++;
+	public static Pez crearSalmon(String nombre,int edad,String genero) {
+		salmones++;
+		return new Pez(nombre,edad,"oceano",genero,"rojo",6);
+		
 	}
-	public int crearBacalao(String nombre,int edad,String genero, Zona zona) {
-		new Pez(nombre,edad,"oceano",genero,zona,"gris",6);
-		return bacalaos++;
+	public static Pez crearBacalao(String nombre,int edad,String genero) {
+		bacalaos++;
+		return new Pez(nombre,edad,"oceano",genero,"gris",6);
+		 
+	}
+	public String getColorEscamas() {
+		return colorEscamas;
+	}
+	public void setColorEscamas(String colorEscamas) {
+		this.colorEscamas=colorEscamas;
+	}
+	public int getCantidadAletas() {
+		return cantidadAletas;
+	}
+	public void setCantidadAletas(int cantidadAletas) {
+		this.cantidadAletas=cantidadAletas;
 	}
 	
 
