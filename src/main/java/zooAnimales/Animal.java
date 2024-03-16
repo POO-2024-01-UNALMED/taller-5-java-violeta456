@@ -67,4 +67,3 @@ public class Animal {
 		this.genero=genero;
 	}
 }
-
