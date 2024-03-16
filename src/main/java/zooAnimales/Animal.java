@@ -18,19 +18,11 @@ public class Animal {
 	}
 	public Animal() {}
 	
-	//public static String totalPorTipo() {
-		//return "Mamiferos: "+Mamifero.cantidadMamiferos()+"\n"+ "Aves: "+Ave.cantidadAves()+"\n"+"Reptiles: "+Reptil.cantidadReptiles()+"\n"+"Peces: "+Pez.cantidadPeces()+"\n"+"Anfibios: "+Anfibio.cantidadAnfibios()+"\n";
-	
-	//}
 	public static String totalPorTipo() {
-		
-		return "Mamiferos: "+Mamifero.getListado().size()+"\n"+ 
-		"Aves: "+Ave.getListado().size()+"\n"+ 
-		"Reptiles: "+Reptil.getListado().size()+"\n" + 
-		"Peces: " +Pez.getListado().size()+"\n"+ 
-		"Anfibios: "+ Anfibio.getListado().size();
-		
+		return "Mamiferos: "+Mamifero.cantidadMamiferos()+"\n"+ "Aves: "+Ave.cantidadAves()+"\n"+"Reptiles: "+Reptil.cantidadReptiles()+"\n"+"Peces: "+Pez.cantidadPeces()+"\n"+"Anfibios: "+Anfibio.cantidadAnfibios()+"\n";
+	
 	}
+
 	
 	public String toString() {
 		if (zona!=null) {
